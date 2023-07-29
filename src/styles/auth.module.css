@@ -1,0 +1,137 @@
+.main{
+    width: 23.4375rem;
+   
+    box-sizing: border-box;
+    max-width: 375px;
+    max-height: 896px;
+    height: 50.75rem;
+    overflow: hidden;
+    background: #FBFBFB;
+
+    position: relative;
+}
+.sliderbox{
+    width: inherit;
+    height: 31rem;
+    padding:64px 0px 30px 0px;
+    box-sizing: border-box;
+    
+}
+.sliderbox .swiper-wrapper{
+    display: none !important;
+}
+.logosec{
+    display: flex;
+width: 375px;
+padding: 20px 10px 10px 20px;
+flex-direction: column;
+align-items: flex-start;
+gap: 10px;
+
+}
+.logo{
+    width: 174px;
+height: 32px;
+}
+.btn_cont{
+    padding: 22px 24px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 15px;
+    margin-top: 36px;
+
+}
+.btn1{
+    display: flex;
+    width: 157px;
+    height: 52px;
+border: none;
+height: 52px;
+padding: 10px;
+justify-content: center;
+color: #007FFF;
+text-align: center;
+font-size: 18px;
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+line-height: 100%;
+letter-spacing: 1.25px;
+text-transform: uppercase;
+align-items: center;
+gap: 10px;
+flex-shrink: 0;
+box-sizing: border-box;
+border-radius: 8px;
+background: #FFF;
+
+/* Buttons */
+box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.10), -3px -3px 10px 0px rgba(0, 0, 0, 0.10);
+}
+.btn2{
+    display: flex;
+width: 157px;
+height: 52px;
+padding: 10px;
+justify-content: center;
+align-items: center;
+border: none;
+gap: 10px;
+color: #FFF;
+text-align: center;
+font-size: 18px;
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+line-height: 100%;
+letter-spacing: 1.25px;
+text-transform: uppercase;
+flex-shrink: 0;
+box-sizing: border-box;
+border-radius: 8px;
+ background-color: rgba(0, 127, 255, 1);
+
+/* Buttons */
+box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.10), -3px -3px 10px 0px rgba(0, 0, 0, 0.10);
+}
+.auth_cont{
+    width: 23.4375rem;
+    height: 56rem;
+    z-index: 1000;
+
+    position: absolute;
+    top: 0px;
+
+
+}
+.btn2::hover{
+    background: #FFF;   
+    color: #007FFF;
+}
+.auth_cont_doun{
+    width: 23.4375rem;
+    height: 56rem;
+    z-index: 1000;
+ 
+    position: absolute;
+   top: 56rem;
+   
+    background-color: red;
+
+
+}
+.otp{
+    width: 23.4375rem;
+    height: 56rem;
+    background-color: red;
+    position: absolute;
+    bottom: -56rem;
+}
+.otp_up{
+    width: 23.4375rem;
+    height: 50.8125rem;
+    background-color: red;
+    position: absolute;
+    top: 0px;
+}

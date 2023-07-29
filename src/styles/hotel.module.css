@@ -1,0 +1,225 @@
+@font-face {
+    font-family: Poppins;
+    src: url(../styles//Poppins\ Regular\ 400.ttf);
+}
+@font-face {
+    font-family: Nunito;
+    src: url(../styles//Nunito-Regular.woff);
+}
+.main{
+    width: 375px;
+    height: 50.75rem;
+    padding: 20px 0px;
+
+}
+.logo_cont{
+    display: flex;
+width:  375px;
+height: 44px;
+margin-bottom: 22px;
+padding: 0px 20px;
+justify-content: center;
+align-items: center;
+gap: 20px;
+flex-shrink: 0;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+
+
+}
+.logo_cont h1{
+    display: flex;
+width: 280px;
+flex-direction: column;
+flex-shrink: 0;
+color: var(--neutral-grey-800, #323F4B);
+font-size: 22px;
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+line-height: 150%;
+}
+.add_rap{
+    width: inherit;
+    padding: 26px;
+}
+
+.add_rap h1{
+    display: flex;
+    margin-bottom: 22px;
+width: 335px;
+flex-direction: column;
+flex-shrink: 0;
+color: var(--neutral-grey-800, #323F4B);
+font-size: 18px;
+font-family: Poppins;
+font-style: normal;
+font-weight: 400;
+line-height: 150%;
+}
+.input_rap{
+    display: flex;
+    flex-direction: column;
+    align-content:center;
+    gap: 20px;
+}
+.input_rap input[type='text']{
+    display: flex;
+width: 289px;
+height: 44px;
+padding: 10px;
+align-items: center;
+border-radius: 8px;
+background: var(--background-text, #EBEBEB);
+gap: 10px;
+flex-shrink: 0;
+border: 0px;
+}
+.input_rap div{
+    display: flex;
+    flex-direction: row;
+    gap: 13px;
+}
+
+.input_rap img{
+    width: 24px;
+    height: 24px;
+    margin-top: 9px;
+}
+.upload_cont label h3{
+    margin: 0px;
+    display: flex;
+width: 120px;
+height: 24px;
+flex-direction: column;
+color: #2F80ED;
+font-size: 14px;
+font-family: Nunito;
+font-style: normal;
+font-weight: 400;
+line-height: 150%;
+}
+.upload_cont img{
+    width: 24px;
+height: 24px;
+
+}
+.input{
+    display: flex;
+    width: 289px;
+    height: 44px;
+    padding: 10px;
+    align-items: center;
+    border-radius: 8px;
+    background: var(--background-text, #EBEBEB);
+    gap: 10px;
+    flex-shrink: 0;
+    border: 0px;
+    color: #007FFF;
+
+}
+
+
+.upload_cont{
+    display: flex;
+    flex-direction: row;
+    margin-top: 28px;
+    gap: 13px;
+    
+   
+
+}
+.upload_cont .file_n{
+   
+width: 159px;
+height: 19px;
+text-align: right !important;
+
+color: var(--hms-1, #007FFF);
+text-align: center;
+font-size: 14px;
+font-family: Nunito;
+font-style: normal;
+font-weight: 400;
+line-height: 150%;
+}
+.uprap{
+    display: flex;
+    flex-direction: row;
+   
+}
+.setpp{
+    width: 188px;
+    text-align: right;
+
+}
+ h2.info{
+    display: flex;
+    margin: 46px 0px;
+width: 343px;
+flex-direction: column;
+flex-shrink: 0;
+color: var(--neutral-grey-800, #323F4B);
+text-align: center;
+font-size: 16px;
+font-family: Nunito;
+font-style: normal;
+font-weight: 400;
+line-height: 150%;
+}
+.btn_cont{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    gap:13px;
+    margin: 55px 0px 0px 0px;
+    
+}
+.btn_cont button{
+    display: flex;
+width: 157px;
+height: 52px;
+padding: 10px;
+justify-content: center;
+align-items: center;
+border: 0px;
+gap: 10px;
+flex-shrink: 0;
+border-radius: 8px;
+
+box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.05), -5px -5px 20px 0px rgba(0, 0, 0, 0.05);
+}
+ .btn_cont button:first-child{
+    color: #007FFF;
+text-align: center;
+font-size: 18px;
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+line-height: 100%;
+letter-spacing: 1.25px;
+text-transform: uppercase;
+border-radius: 8px;
+background: #FFF;
+box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.05), -5px -5px 20px 0px rgba(0, 0, 0, 0.05);
+}
+.btn_cont button:nth-child(2){
+    color: #FFF;
+    border-radius: 8px;
+background: #007FFF;
+
+/* Buttons */
+box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.10), -3px -3px 10px 0px rgba(0, 0, 0, 0.10);
+text-align: center;
+
+/* I/Button */
+font-size: 18px;
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+line-height: 100%;
+letter-spacing: 1.25px;
+text-transform: uppercase;
+}

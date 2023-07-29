@@ -1,0 +1,173 @@
+@font-face {
+    font-family: Poppins;
+    src: url(../styles//Poppins\ Regular\ 400.ttf);
+}
+@font-face {
+    font-family: Nunito;
+    src: url(../../src/styles/Nunito-Regular.woff);
+}
+@font-face {
+    font-family: Roboto;
+    src: url(../../src/styles/Roboto-Regular-webfont.woff);
+}
+
+.main{
+    width: 23.4375rem;
+    height: 50.75rem;
+}
+
+.main .into_cont{
+    display: flex;
+width: 376px;
+height: 44px;
+padding: 0px 16px;
+justify-content: center;
+align-items: center;
+gap: 127px;
+flex-shrink: 0;
+margin-bottom: 14px;
+}
+.into_cont h1{
+    color: var(--neutral-grey-800, #323F4B);
+font-family: Poppins;
+font-size: 22px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%; /* 33px */
+}
+.checkbox_rap{
+    padding: 18px ;
+}
+
+.select_all{
+    display: flex;
+width: 339px;
+height: 40px;
+padding: 5px 5px 5px 15px;
+align-items: center;
+
+flex-shrink: 0;
+border-radius: 5px 5px 0px 0px;
+background: #FFF;
+}
+.select_all h1{
+    color: #000;
+font-family: Nunito;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 24px */
+}
+.ganral_rap .genral_policy{
+    border-radius: 0px 0px 5px 5px;
+background: #F9F9F9;
+width: 339px;
+padding: 5px 0px 5px 0px;
+flex-shrink: 0;
+}
+.genral_policy ol li{
+color: #000;
+font-family: Roboto;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 21px */
+}
+ .long_rap{
+    display: flex;
+width: 339px;
+flex-direction: column;
+padding: 5px;
+align-items: center;
+
+ }
+.long_rap  .long_text{
+    color: #000;
+font-family: Roboto;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 21px */
+width: 339px;
+
+flex-shrink: 0;
+border-radius: 0px 0px 5px 5px;
+background: #F9F9F9;
+padding: 13px;
+
+}
+
+.triple_rap  .triple_text{
+    width: 348px;
+    padding: 12px;
+    background: #F9F9F9;
+    flex-shrink: 0;
+}
+.btn_rap{
+    display: flex;
+    flex-direction: row;
+    gap: 13px;
+    margin: 55px 0px 0px 0px;
+    position: absolute;
+    bottom: 51px;
+    left: 26px;
+    
+}
+.btn_rap button{
+    display: flex;
+width: 157px;
+height: 52px;
+padding: 10px;
+justify-content: center;
+align-items: center;
+border: 0px;
+gap: 10px;
+flex-shrink: 0;
+border-radius: 8px;
+
+box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.05), -5px -5px 20px 0px rgba(0, 0, 0, 0.05);
+}
+ .btn_rap button:first-child{
+    color: #007FFF;
+text-align: center;
+font-size: 18px;
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+line-height: 100%;
+letter-spacing: 1.25px;
+text-transform: uppercase;
+border-radius: 8px;
+background: #FFF;
+box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.05), -5px -5px 20px 0px rgba(0, 0, 0, 0.05);
+}
+.btn_rap button:nth-child(2){
+    color: #FFF;
+    border-radius: 8px;
+background: #007FFF;
+display: flex;
+width: 157px;
+height: 52px;
+padding: 10px;
+justify-content: center;
+align-items: center;
+border: 0px;
+gap: 10px;
+flex-shrink: 0;
+border-radius: 8px;
+
+
+
+
+box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.10), -3px -3px 10px 0px rgba(0, 0, 0, 0.10);
+text-align: center;
+
+/* I/Button */
+font-size: 18px;
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+line-height: 100%;
+letter-spacing: 1.25px;
+text-transform: uppercase;
+}

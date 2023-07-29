@@ -1,0 +1,232 @@
+@font-face {
+    font-family: Poppins;
+    src: url(../styles//Poppins\ Regular\ 400.ttf);
+}
+@font-face {
+    font-family: Nunito;
+    src: url(../../src/styles/Nunito-Regular.woff);
+}
+
+.main{
+    height: 50.75rem;
+    width: 23.4375rem;
+
+}
+.main h2{
+    color: #000;
+font-family: Nunito;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+margin-left: 30px;
+margin-top: 30px;
+line-height: 150%; /* 24px */
+}
+
+.into_cont{
+    display: flex;
+    flex-direction: row;
+
+height: 44px;
+padding: 0px 16px;
+justify-content: center;
+align-items: center;
+gap: 35px;
+flex-shrink: 0;
+}
+.into_cont h1{
+    color:  #323F4B;
+    width: 280px;
+flex-shrink: 0;
+font-family: Poppins;
+font-size: 22px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%; /* 33px */
+}
+.statusbar{
+    width: inherit;
+    padding: 13px 0px 16px 0px; 
+
+}
+.btn_rap{
+    display: flex;
+    flex-direction: row;
+    gap: 13px;
+    margin: 55px 0px 0px 0px;
+    position: absolute;
+    bottom: 51px;
+    left: 26px;
+    
+}
+.btn_rap button{
+    display: flex;
+width: 157px;
+height: 52px;
+padding: 10px;
+justify-content: center;
+align-items: center;
+border: 0px;
+gap: 10px;
+flex-shrink: 0;
+border-radius: 8px;
+
+box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.05), -5px -5px 20px 0px rgba(0, 0, 0, 0.05);
+}
+ .btn_rap button:first-child{
+    color: #007FFF;
+text-align: center;
+font-size: 18px;
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+line-height: 100%;
+letter-spacing: 1.25px;
+text-transform: uppercase;
+border-radius: 8px;
+background: #FFF;
+box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.05), -5px -5px 20px 0px rgba(0, 0, 0, 0.05);
+}
+.btn_rap button:nth-child(2){
+    color: #FFF;
+    border-radius: 8px;
+background: #007FFF;
+display: flex;
+width: 157px;
+height: 52px;
+padding: 10px;
+justify-content: center;
+align-items: center;
+border: 0px;
+gap: 10px;
+flex-shrink: 0;
+border-radius: 8px;
+
+
+
+
+box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.10), -3px -3px 10px 0px rgba(0, 0, 0, 0.10);
+text-align: center;
+
+/* I/Button */
+font-size: 18px;
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+line-height: 100%;
+letter-spacing: 1.25px;
+text-transform: uppercase;
+}
+.room_cont{
+    width: 328px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+height: 96px;
+flex-shrink: 0;
+border-radius: 10px;
+background: #FFF;
+
+/* Cards3 */
+box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.05);
+}
+.rap_cont{
+    display: flex;
+width: 294px;
+height: 44px;
+transform: translate(16px,26px);
+
+
+justify-content: center;
+align-items: center;
+
+flex-shrink: 0;
+border-radius: 10px;
+border: 0.2px solid #9D9D9D;
+background: #FBFBFB;
+}
+.rap_cont input[type="text"]{
+    display: flex;
+width: 210px;
+height: 44px;
+padding: 10px;
+align-items: center;
+gap: 10px;
+flex-shrink: 0;
+border-radius: 10px 0px 0px 10px;
+border: 0.2px solid #9D9D9D;
+    
+
+}
+.rap_cont input[type="text"]::placeholder{
+    color: #7B8794;
+font-family: Nunito;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 120%; /* 16.8px */
+letter-spacing: 0.15px;
+}
+.rap_cont button{
+    display: flex;
+    width: 84px;
+    padding: 14px;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+text-align: center;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 100%; /* 16px */
+letter-spacing: 1.25px;
+text-transform: uppercase;
+border: 0px;
+    gap: 3px;
+    border-radius: 0px 10px 10px 0px;
+background: var(--hms-1, #007FFF);
+}
+.roomtypes{
+    width: 313px;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.roomtypes input[type="radio"]{
+    display: none;
+}
+.roomtypes input[type="radio"]:checked+label{
+    display: flex;
+width: 313px;
+padding: 10px 10px 10px 20px;
+align-items: flex-start;
+gap: 10px;
+border-radius: 8px;
+border: 0.5px solid var(--background-border-tab, #7B8794);
+background: #F4F4F4;
+color: var(--text-unselected, #4F4F4F);
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 27px */
+}
+.roomtypes label{
+    display: flex;
+width: 313px;
+padding: 10px 10px 10px 20px;
+align-items: flex-start;
+gap: 10px;
+border-radius: 8px;
+border: 0.5px solid #FFF;
+background: #A3A8AE;
+color: #FFF;
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%; /* 27px */
+ /* 27px */
+}

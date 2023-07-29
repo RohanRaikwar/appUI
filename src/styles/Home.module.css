@@ -1,0 +1,20 @@
+.main{
+  width: 23.4375rem;
+  padding-top: 12.5rem;
+  box-sizing: border-box;
+  
+  max-width: 375px;
+  max-height: 812px;
+  height: 50.75rem;
+  background:   linear-gradient(209deg, #FFF 0%, rgba(226, 241, 255, 0.59) 100%);
+  position: relative;
+}
+.logo{
+  width: 193px;
+height: 228px;
+margin-left: 24%;
+flex-shrink: 0;
+box-sizing: border-box;
+}
+
+

@@ -1,0 +1,38 @@
+@font-face {
+    font-family: poppins;
+    src: url(./Poppins\ Regular\ 400.ttf);
+}
+
+.img{
+    width: 281px;
+height: 270.652px;
+flex-shrink: 0;
+margin: 0px 47px 10px 47px;
+}
+
+ .slide_rap h1{
+    color: #333;
+text-align: center;
+font-size: 22px;
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+line-height: 150%;
+text-transform: uppercase;
+}
+.slide_rap h2{
+    color: #333;
+    margin: 20px auto 40px auto;
+text-align: center;
+font-size: 18px;
+font-family: Poppins;
+padding-bottom: 70px;
+font-style: normal;
+font-weight: 400;
+display: flex;
+width: 313px;
+height: 72px;
+flex-direction: column;
+flex-shrink: 0;
+line-height: 150%;
+}

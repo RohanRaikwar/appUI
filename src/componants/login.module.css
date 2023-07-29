@@ -1,0 +1,198 @@
+@font-face {
+    font-family: nunito;
+    src: url(../styles/Nunito-Regular.woff);
+}
+
+.main{
+    position: absolute;
+    width: 23.4375rem;
+    height: 40rem;
+    background: #FFF;
+    top: 20rem;
+    border-radius: 50px 50px 0px 0px;
+
+
+}
+.login_sec{
+    height: 72px;
+    border-bottom: 1px solid rgba(123, 135, 148, 1);
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    gap: 32px;
+    padding: 27px 32px 10px 41px;
+}
+.login_sec  h1{
+    margin: 0px;
+    display: flex;
+width: 234px;
+height: 34px;
+flex-direction: column;
+flex-shrink: 0;
+color: #333;
+display: flex;
+flex-direction: row;
+gap: 32px;
+/* Heading/Overlay */
+font-size: 24px;
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+line-height: 150%;
+}
+.loginfild{
+    width: inherit;
+    padding: 24px 40px;
+}
+.loginfild h1{
+    display: flex;
+    margin: 0px 0px 10px 0px ;
+width: 292px;
+height: 34px;
+-ms-text-combine-horizontal: 0px;
+flex-direction: column;
+flex-shrink: 0;
+color: #333;
+font-size: 17px;
+font-family: Poppins;
+font-style: normal;
+font-weight: 900;
+line-height: 150%;
+}
+.loginfild h2{
+    display: flex;
+width: 218px;
+margin: 0px 0px 12px 0px;
+height: 59px;
+flex-direction: column;
+flex-shrink: 0;
+color:  #4F4F4F;
+font-size: 16px;
+font-family: Nunito;
+font-style: normal;
+font-weight: 550;
+line-height: 150%;
+}
+.loginfild input[type="text"]{
+    display: flex;
+    width: 294px;
+    padding: 10px;
+    margin: 0px 0px 38px 0px;
+    height: 44px;
+    align-items: flex-start;  
+    font-size: 17px;
+    font-family: nunito;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    gap: 10px;
+    border-radius: 4px;
+    background: #EBEBEB;
+    border: 0px;
+}
+.loginfild input[type="text"]::placeholder{
+    color: #AAA;
+font-size: 17px;
+font-family: nunito;
+font-style: normal;
+font-weight: 400;
+line-height: 150%;
+}
+.loginfild input[type="checkbox"]{
+    width: 21px;
+    height: 21px;
+}
+.chack_rap{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 0px 0px 52px 0px;
+}
+.chack_rap::after{
+    content: " ";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+
+
+
+}
+.chack_rap h3{
+    color: #000;
+    font-size: 14px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    margin: 4px;
+
+}
+.chack_rap h3 span{
+    color: rgba(0, 127, 255, 1);
+
+}
+.otpgetbtn{
+    display: flex;
+width: 295px;
+height: 52px;
+padding: 10px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex-shrink: 0;
+border-radius: 8px;
+background:  #007FFF;
+border: 0px;
+color: #FFF;
+text-align: center;
+font-size: 18px;
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+line-height: 100%;
+letter-spacing: 1.25px;
+text-transform: uppercase;
+
+/* Buttons */
+box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.10), -3px -3px 10px 0px rgba(0, 0, 0, 0.10);
+}
+.otp{
+    width: 25.875rem;
+    position: absolute;
+    top: 0px;
+    z-index: 10000;
+    
+}
+
+.otp_down{
+    width: 25.875rem;
+    position: absolute;
+    top: -56rem;
+    z-index: 10000;
+}
+.deoptbtn{
+    display: flex;
+    width: 295px;
+    height: 52px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background:  #536679;
+    border: 0px;
+    color: #e9d6d6;
+    text-align: center;
+    font-size: 18px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    
+    /* Buttons */
+    box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.10), -3px -3px 10px 0px rgba(0, 0, 0, 0.10);
+
+}

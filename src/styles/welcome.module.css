@@ -1,0 +1,141 @@
+@font-face {
+    font-family: Poppins;
+    src: url(../styles//Poppins\ Regular\ 400.ttf);
+}
+
+.main{
+    width:  23.4375rem;
+    height: 50.75rem;
+    background-image: url(../../public/Rectangle\ 192.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+
+    
+}
+.wel_box{
+    width: inherit;
+    display: flex;
+
+height: 44px;
+padding: 20px 16px 0px 16px;
+justify-content: center;
+align-items: center;
+gap: 128px;
+flex-shrink: 0;
+
+    
+}
+.wel_box h1{
+    color: #FFF;
+font-size: 18px;
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+line-height: 150%;
+
+}
+.wel_rap{
+    width: 23.4375rem;
+    padding: 33px 19px 10px 21px;
+
+
+}
+.wel_rap h1{display: flex;
+    width: 335px;
+    flex-direction: column;
+    flex-shrink: 0;
+    color: #FFF;
+font-size: 18px;
+font-family: Poppins;
+font-style: normal;
+font-weight: 500;
+line-height: 150%;
+
+}
+
+.list ul{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    list-style: none;
+    position: relative;
+}
+.list ul li{
+    color: var(--dark-grey, #717171);
+font-size: 17px;
+font-family: Poppins;
+font-style: normal;
+font-weight: 400;
+line-height: 150%;
+}
+.list ul li::before{
+    content: " ";
+    width: 11px;
+    height: 11px;
+    left: 10px; 
+    margin: 7px 0px;
+    border-radius: 50%;
+    
+   
+    position: absolute;
+    background: #545454;
+}
+.btns{
+  
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 100px;
+
+}
+ .list .btns button{
+    display: flex;
+width: 157px;
+height: 52px;
+padding: 10px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex-shrink: 0;
+
+text-align: center;
+font-size: 18px;
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+line-height: 100%;
+letter-spacing: 1.25px;
+text-transform: uppercase;
+border-radius: 8px;
+
+}
+
+.btns  .back{
+    color: rgba(0, 127, 255, 1);background: #FFF;
+    border: 0px;
+
+    border-radius: 8px;
+    background: #FFF;
+    
+    /* Buttons */
+    box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.10), -3px -3px 10px 0px rgba(0, 0, 0, 0.10);}
+
+    .cont{
+        color: #FFF;
+text-align: center;
+font-size: 18px;
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+line-height: 100%;
+letter-spacing: 1.25px;
+text-transform: uppercase;
+border-radius: 8px;
+background: #007FFF;
+border: 0px;
+
+/* Buttons */
+box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.10), -3px -3px 10px 0px rgba(0, 0, 0, 0.10);
+    }
