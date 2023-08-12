@@ -14,12 +14,12 @@
 
 .main .into_cont{
     display: flex;
-width: 376px;
+width: 375px;
 height: 44px;
 padding: 0px 16px;
 justify-content: center;
 align-items: center;
-gap: 143px;
+gap: 142px;
 flex-shrink: 0;
 margin-bottom: 14px;
 }
@@ -210,7 +210,7 @@ line-height: 150%; /* 24px */
 display: inline-flex;
 
 align-items: center;
-gap: 13px;
+gap: 6px;
 border-radius: 5px;
 background: #ECECEC;
 width: 164px;
@@ -228,3 +228,61 @@ padding: 10px;
     flex-shrink: 0;
 }
 
+
+.btn_cont{
+   
+    display: flex;
+    flex-direction: row;
+   padding-bottom: 40px;
+    position: sticky;
+    top: 1000px;
+    gap: 13px;
+    margin: 55px 0px 0px 26px;;
+    
+}
+.btn_cont button{
+    display: flex;
+width: 157px;
+height: 52px;
+padding: 10px;
+justify-content: center;
+align-items: center;
+border: 0px;
+gap: 10px;
+flex-shrink: 0;
+border-radius: 8px;
+
+box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.05), -5px -5px 20px 0px rgba(0, 0, 0, 0.05);
+}
+ .btn_cont button:first-child{
+    color: #007FFF;
+text-align: center;
+font-size: 18px;
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+line-height: 100%;
+letter-spacing: 1.25px;
+text-transform: uppercase;
+border-radius: 8px;
+background: #FFF;
+box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.05), -5px -5px 20px 0px rgba(0, 0, 0, 0.05);
+}
+.btn_cont button:nth-child(2){
+    color: #FFF;
+    border-radius: 8px;
+background: #007FFF;
+
+/* Buttons */
+box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.10), -3px -3px 10px 0px rgba(0, 0, 0, 0.10);
+text-align: center;
+
+/* I/Button */
+font-size: 18px;
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+line-height: 100%;
+letter-spacing: 1.25px;
+text-transform: uppercase;
+}

@@ -81,6 +81,15 @@ border: 0px;
     display: flex;
     flex-direction: row;
     gap: 13px;
+    position: relative;
+}
+.input_rap div>span{
+    position: absolute;
+    color: red;
+    top: 43px;
+    font-size: 13px;
+    left: 39px;
+
 }
 
 .input_rap img{
@@ -116,6 +125,7 @@ height: 24px;
     background: var(--background-text, #EBEBEB);
     gap: 10px;
     flex-shrink: 0;
+  
     border: 0px;
     color: #007FFF;
 

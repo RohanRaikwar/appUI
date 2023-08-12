@@ -5,14 +5,14 @@ import Imageslider from '../../materialUI/Image.slicder'
 import styles from "../../styles/auth.module.css"
 import logo from '../../../public/smalllogo.svg'
 import { ClassNames } from '@emotion/react'
-import Login from '../../componants/login'
-import Sigup from '../../componants/signup.module'
-import Otp from '../../componants/otp'
+import Login from '../../componants/Login'
+import Sigup from '../../componants/Signup.module'
+import Otp from '../../componants/Otp'
 
 const index = () => {
   const [css,setcss] = useState(false)
   const [auth,seauth] = useState<any>()
-  const [otpup,setotpup]=useState<boolean>(false);
+  const [otpup,setotpup]=useState<any>(false);
   const setauth =():any => {setcss(!css)
     console.log("click");
     
@@ -33,9 +33,9 @@ const index = () => {
              </div>
             
         </main>
-        <div className={css?styles.auth_cont:styles.auth_cont_doun}>
+        <div style={css?{top:"0px"}:{top:"56rem"}} className={styles.auth_cont_doun}>
           {
-            auth? <Sigup />:<Login setotpup={setotpup} otpup={otpup}  setauth ={setauth}/>
+            auth? <Sigup  setotpup={setotpup} setauth={setauth} />:<Login setotpup={setotpup} otpup={otpup}  setauth ={setauth}/>
                
           }
 

@@ -18,7 +18,7 @@
 
 .main .into_cont{
     display: flex;
-width: 376px;
+width: 375px;
 height: 44px;
 padding: 0px 16px;
 justify-content: center;
@@ -38,7 +38,32 @@ line-height: 150%; /* 33px */
 .checkbox_rap{
     padding: 18px ;
 }
-
+ .main input[type="checkbox"]{
+    display: none;
+}
+.main input[type="checkbox"]:checked + label> img:first-child{
+    display: none;
+    height: 20px;
+    width: 20px;
+}   
+.main input[type="checkbox"]:checked + label> img:nth-child(2){
+    display: block;
+    height: 20px;
+    width: 20px;
+}
+.main input[type="checkbox"] + label{
+    margin-right: 6px;
+} 
+.main input[type="checkbox"]+ label> img:nth-child(2){
+    display: none;
+    height: 20px;
+    width: 20px;
+}
+.main input[type="checkbox"]+ label> img:nth-child(1){
+    display: block;
+    width: 20px;
+    height: 20px;
+}
 .select_all{
     display: flex;
 width: 339px;
@@ -49,6 +74,7 @@ align-items: center;
 flex-shrink: 0;
 border-radius: 5px 5px 0px 0px;
 background: #FFF;
+position: relative;
 }
 .select_all h1{
     color: #000;
@@ -63,7 +89,14 @@ line-height: 150%; /* 24px */
 background: #F9F9F9;
 width: 339px;
 padding: 5px 0px 5px 0px;
+
 flex-shrink: 0;
+}
+.select_all >h1+img{
+    position: absolute;
+    right: 10px;
+    top:5px;
+    transform: rotate(180deg);
 }
 .genral_policy ol li{
 color: #000;
@@ -104,13 +137,18 @@ padding: 13px;
     flex-shrink: 0;
 }
 .btn_rap{
+
     display: flex;
+    /* width: 375px; */
     flex-direction: row;
     gap: 13px;
-    margin: 55px 0px 0px 0px;
-    position: absolute;
+    margin: 55px 0px 0px 27px;
+    /* position: absolute; */
+    position: -webkit-sticky;
+    position: sticky;
     bottom: 51px;
-    left: 26px;
+    top: 718px;
+   
     
 }
 .btn_rap button{

@@ -5,7 +5,7 @@ import logo from "../../public/Frame 2655 1.png";
 import { style } from "@mui/system";
 import { useRouter } from "next/router";
 
-const welcome = () => {
+const Welcome = () => {
   const router = useRouter()
 
   return (
@@ -39,4 +39,4 @@ const welcome = () => {
   );
 };
 
-export default welcome;
+export default Welcome;

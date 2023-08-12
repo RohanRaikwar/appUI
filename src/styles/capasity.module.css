@@ -14,12 +14,12 @@
 
 .main .into_cont{
     display: flex;
-width: 376px;
+width: 375px;
 height: 44px;
 padding: 0px 16px;
 justify-content: center;
 align-items: center;
-gap: 151px;
+gap: 150px;
 flex-shrink: 0;
 margin-bottom: 14px;
 }
@@ -47,8 +47,10 @@ line-height: 150%; /* 33px */
     display: flex;
     flex-direction: row;
     padding: 0px 0px 56px;
+    position: sticky;
+    top: 1000px;
     gap: 13px;
-    margin: 55px 0px 54px 26px;;
+    margin: 55px 0px 26px 26px;;
     
 }
 .btn_cont button{

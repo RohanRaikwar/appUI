@@ -1,37 +1,79 @@
 import React, { useState } from "react";
 import style from "./../../styles/policy.module.css";
 import Logo from "./../../../public/Frame 2655 1.png";
-import Statusbar from "@/materialUI/statusbar";
+import Statusbar from "@/materialUI/Statusbar";
 import Image from "next/image";
+import checkblack from './../../../public/Untitled design.png'
+import checkfill from './../../../public/check fill.svg'
+import downarrow from './../../../public/downarrow.svg'
 
-const policy = () => {
-  const [checkbox ,setcheck_box] =useState<any>([false,false,false,false,false])
+const Policy = () => {
+  const [checkbox ,setcheck_box] =useState<boolean[]>([false,false,false,false,false])
+  const [selectAll,setSelectAll] = useState<boolean>(false)
+  const [showCondition,setShowCondition] = useState<boolean[]>([false,false,false,false,false])
   function setcheck(){
-    setcheck_box([true,true,true,true,true,true])
+    if(selectAll==true){
+      setcheck_box([...[false,false,false,false,false]])
+      setSelectAll(!selectAll)
+      console.log("false all");
+      
+    }
+    else{
+      setcheck_box([...[true,true,true,true,true]])
+      setSelectAll(!selectAll)
+           console.log("true all");
+
+    }
+
   }
   function singleckeck(index:any){
-    setcheck_box(checkbox[index]=!checkbox[index])
+    console.log("challa");
+    
+    const clone =checkbox
+    clone[index] = !checkbox[index]
+    setcheck_box([...clone])
+    const check_All= clone.every((value)=>value==true)
+    if(check_All){
+      console.log("yaha tahk chloa");
+      
+      setSelectAll(true)
+    }
+    else{
+      console.log("yaha tahk chloa1");
+      setSelectAll(false)
+    }
 
+  }
+  const showConditionHandller =(index:number)=>{
+    const clone = showCondition
+    clone[index] = !showCondition[index]
+    setShowCondition([...clone])
   }
   return (
     <div className={style.main}>
       <div className={style.into_cont}>
-        <h1>Add Images</h1> <Image src={Logo} alt="dd" />
+        <h1>Guest Policy</h1> <Image src={Logo} alt="dd" />
       </div>
       <div>
-        <Statusbar />
+        <Statusbar  prieveasevalue={87} updatevalue={100}/>
       </div>
       <div className={style.checkbox_rap}>
         <div className={style.select_all}>
-          <input type="checkbox"  onClick={setcheck}/>
+          <input type="checkbox" id="select_all" checked={selectAll} onClick={setcheck}/>
+          <label htmlFor="select_all">
+            <Image src={checkblack} alt="knjjd"/> <Image src={checkfill} alt="knjjd"/>
+          </label>
           <h1>Select All</h1>
         </div>
         <div className={style.ganral_rap}>
           <div className={style.select_all}>
-            <input type="checkbox" onChange={()=>singleckeck(0)} checked={checkbox[0]}/>
-            <h1>General Policies</h1>
+            <input type="checkbox" id="general" onChange={()=>singleckeck(0)} checked={checkbox[0]}/>
+          <label htmlFor="general">
+            <Image src={checkblack} alt="knjjd"/><Image src={checkfill} alt="knjjd"/>
+          </label>
+          <h1>General Policies</h1><Image src={downarrow} onClick={()=>showConditionHandller(0)} style={showCondition[0]?{transform:"rotate(0deg)"}:{transform:"rotate(180deg)"}} alt="ff" />
           </div>
-          <div className={style.genral_policy}>
+          <div style={showCondition[0]?{display:"block"}:{display:"none"}} className={style.genral_policy}>
             <ol>
               <li>
                 Couples are welcome. Guests can check in using any local or
@@ -97,10 +139,13 @@ const policy = () => {
           </div>
           <div className={style.long_rap}>
             <div className={style.select_all}>
-              <input type="checkbox"  checked={checkbox[1]}/>
-              <h1>Long Stay Bookings</h1>
+              <input type="checkbox" id="long_stay" onChange={()=>singleckeck(1)} checked={checkbox[1]}/>
+              <label htmlFor="long_stay">
+            <Image src={checkblack} alt="knjjd"/><Image src={checkfill} alt="knjjd"/>
+          </label>
+              <h1>Long Stay Bookings</h1><Image  onClick={()=>showConditionHandller(1)} style={showCondition[1]?{transform:"rotate(0deg)"}:{transform:"rotate(180deg)"}}src={downarrow} alt="ff" />
             </div>
-            <div className={style.long_text}>
+            <div style={showCondition[1]?{display:"block"}:{display:"none"}} className={style.long_text}>
             
                 For bookings of more than 7 nights, you have to settle all
                 outstanding payments on a weekly basis. Further accommodation is
@@ -110,10 +155,13 @@ const policy = () => {
           </div>
           <div className={style.triple_rap}>
             <div className={style.select_all}>
-              <input type="checkbox" checked={checkbox[3]} />
-              <h1>Triple Occupancy Policy</h1>
+              <input type="checkbox" id="triple"  onChange={()=>singleckeck(2)} checked={checkbox[2]} />
+              <label htmlFor="triple">
+            <Image src={checkblack} alt="knjjd"/><Image src={checkfill} alt="knjjd"/>
+          </label>
+              <h1>Triple Occupancy Policy</h1><Image onClick={()=>showConditionHandller(2)} style={showCondition[2]?{transform:"rotate(0deg)"}:{transform:"rotate(180deg)"}} src={downarrow} alt="ff" />
             </div>
-            <div className={style.triple_text}>
+            <div  style={showCondition[2]?{display:"block"}:{display:"none"}} className={style.triple_text}>
               Some Hotels allow triple occupancy by providing an extra mattress
               for the third person for extra fee. However no extra bed is
               usually provided.
@@ -121,10 +169,13 @@ const policy = () => {
           </div>
           <div className={style.ganral_rap} >
             <div className={style.select_all}>
-              <input type="checkbox" checked={checkbox[4]} />
-              <h1>Visitors Policy</h1>
+              <input type="checkbox" id="visitor" onChange={()=>singleckeck(3)} checked={checkbox[3]} />
+              <label htmlFor="visitor">
+            <Image src={checkblack} alt="knjjd"/><Image src={checkfill} alt="knjjd"/>
+          </label>
+              <h1>Visitors Policy</h1><Image onClick={()=>showConditionHandller(3)} style={showCondition[3]?{transform:"rotate(0deg)"}:{transform:"rotate(180deg)"}} src={downarrow} alt="ff" />
             </div>
-            <div className={style.genral_policy}>
+            <div style={showCondition[3]?{display:"block"}:{display:"none"}} className={style.genral_policy}>
               <ol>
                 <li>
                   Visitors are generally allowed to meet guests in the guest
@@ -141,20 +192,25 @@ const policy = () => {
           </div>
           <div className={style.triple_rap}>
             <div className={style.select_all}>
-              <input type="checkbox" checked={checkbox[5]} />
-              <h1>Child Policy</h1>
+              <input type="checkbox" id="child" onChange={()=>singleckeck(4)} checked={checkbox[4]} />
+              <label htmlFor="child">
+            <Image src={checkblack} alt="knjjd"/><Image src={checkfill} alt="knjjd"/>
+          </label>
+              <h1>Child Policy</h1><Image onClick={()=>showConditionHandller(4)}  style={showCondition[4]?{transform:"rotate(0deg)"}:{transform:"rotate(180deg)"}} src={downarrow} alt="ff" />
             </div>
-            <div className={style.triple_text}>
+            <div style={showCondition[4]?{display:"block"}:{display:"none"}} className={style.triple_text}>
               Stay of 1 child up to 5 years of age is complementary without the
               use of an extra mattress. Breakfast charges may be applicable for
               the child.
             </div>
           </div>
         </div>
+      
       </div>
       <div  className={style.btn_rap}><button>BACK</button><button >CONTINEU</button></div>
+    
     </div>
   );
 };
 
-export default policy;
+export default Policy;

@@ -14,12 +14,12 @@
 
 .main .into_cont{
     display: flex;
-width: 376px;
+width: 375px;
 height: 44px;
 padding: 0px 16px;
 justify-content: center;
 align-items: center;
-gap: 127px;
+gap: 123px;
 flex-shrink: 0;
 margin-bottom: 14px;
 }
@@ -80,7 +80,7 @@ font-size: 14px;
 font-style: normal;
 font-weight: 400;
 line-height: 100%; /* 14px */
-width: 142px;
+
 flex-shrink: 0;
 }
 .service_cont input[type="checkbox"]:checked+label{
@@ -104,17 +104,18 @@ line-height: 100%; /* 14px */
   
 
 }
-.btn_rap{
+.btn_cont{
+   
     display: flex;
     flex-direction: row;
+    padding: 0px 0px 56px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 1000px;
     gap: 13px;
-    margin: 55px 0px 0px 0px;
-    position: absolute;
-    bottom: 51px;
-    left: 26px;
-    
+    margin: 55px 0px -4px 26px;
 }
-.btn_rap button{
+.btn_cont button{
     display: flex;
 width: 157px;
 height: 52px;
@@ -128,7 +129,7 @@ border-radius: 8px;
 
 box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.05), -5px -5px 20px 0px rgba(0, 0, 0, 0.05);
 }
- .btn_rap button:first-child{
+ .btn_cont button:first-child{
     color: #007FFF;
 text-align: center;
 font-size: 18px;
@@ -142,24 +143,12 @@ border-radius: 8px;
 background: #FFF;
 box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.05), -5px -5px 20px 0px rgba(0, 0, 0, 0.05);
 }
-.btn_rap button:nth-child(2){
+.btn_cont button:nth-child(2){
     color: #FFF;
     border-radius: 8px;
 background: #007FFF;
-display: flex;
-width: 157px;
-height: 52px;
-padding: 10px;
-justify-content: center;
-align-items: center;
-border: 0px;
-gap: 10px;
-flex-shrink: 0;
-border-radius: 8px;
 
-
-
-
+/* Buttons */
 box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.10), -3px -3px 10px 0px rgba(0, 0, 0, 0.10);
 text-align: center;
 

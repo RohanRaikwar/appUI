@@ -34,7 +34,7 @@ display: flex;
 flex-direction: row;
 gap: 32px;
 /* Heading/Overlay */
-font-size: 24px;
+font-size: 22px;
 font-family: Poppins;
 font-style: normal;
 font-weight: 600;
@@ -43,6 +43,7 @@ line-height: 150%;
 .loginfild{
     width: inherit;
     padding: 24px 40px;
+    position: relative;
 }
 .loginfild h1{
     display: flex;
@@ -159,15 +160,17 @@ box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.10), -3px -3px 10px 0px rgba(0, 0, 
 .otp{
     width: 25.875rem;
     position: absolute;
-    top: 0px;
+   
     z-index: 10000;
+    transition: 1s all;
     
 }
 
 .otp_down{
     width: 25.875rem;
     position: absolute;
-    top: -56rem;
+    transition: 500ms linear all;
+  
     z-index: 10000;
 }
 .deoptbtn{

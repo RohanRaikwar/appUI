@@ -1,6 +1,6 @@
 .main{
     width: 23.4375rem;
-    max-width: 375pxpx;
+    max-width: 375px;
     height: 478px;
     max-height: 50rem;
     position: absolute;
@@ -53,7 +53,7 @@ line-height: 150%;
     padding: 10px;
 }
 .otp_rap  div  {
-    margin:63px 0px 40px 0px;
+    margin:63px 0px 10px 0px;
     flex-direction: row;
     gap: 10px;
    
