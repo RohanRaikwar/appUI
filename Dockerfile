@@ -1,8 +1,7 @@
 FROM node:18.4.0-alpine
-WORKDIR .
+WORKDIR ./app
 RUN  npm install
-COPY package.json .
-COPY . . 
+COPY ./ ./app 
 EXPOSE 3000
 CMD [ "npm","run","start" ]
 
