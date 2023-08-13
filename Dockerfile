@@ -1,4 +1,4 @@
-FROM nodejs:letest
+FROM node:letest
 WORKDIR /src
 RUN  npm install
 COPY packege.json ./
