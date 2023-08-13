@@ -1,4 +1,4 @@
-FROM node:14
+FROM node:latest
 WORKDIR /src
 RUN  npm install
 COPY package.json ./
