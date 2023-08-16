@@ -1,0 +1,19 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/Welcome": "pages/Welcome.html",
+  "/api/hello": "pages/api/hello.js",
+  "/auth": "pages/auth.html",
+  "/hotel/Addrooms": "pages/hotel/Addrooms.html",
+  "/hotel/Amenities": "pages/hotel/Amenities.html",
+  "/hotel/Capasity": "pages/hotel/Capasity.html",
+  "/hotel/Enterdetails": "pages/hotel/Enterdetails.html",
+  "/hotel/Policy": "pages/hotel/Policy.html",
+  "/hotel/Services": "pages/hotel/Services.html",
+  "/hotel/Uploadroomimage": "pages/hotel/Uploadroomimage.html",
+  "/hotel/Varification": "pages/hotel/Varification.html",
+  "/hotel/data": "pages/hotel/data.html",
+  "/": "pages/index.html",
+  "/404": "pages/404.html"
+}
