@@ -1,8 +1,7 @@
-FROM nodejs:letest
-WORKDIR /src
-RUN  npm install
-COPY packege.json ./
+FROM node:latest
+WORKDIR /app
+COPY package.json ./
 COPY . . 
+RUN  npm install -g npm@9.8.1
 EXPOSE 3000
 CMD [ "npm","run","start" ]
-
