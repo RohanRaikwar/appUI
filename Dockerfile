@@ -15,7 +15,7 @@ RUN npm install -g next
 COPY . .
 
 # Build the Next.js app
-RUN cross-env NODE_OPTIONS='--max-old-space-size=102400' next build
+RUN npm run cross-env NODE_OPTIONS='--max-old-space-size=102400' next build
 
 # Expose the port that the app will run on
 EXPOSE 3000
