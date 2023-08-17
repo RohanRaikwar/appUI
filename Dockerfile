@@ -10,12 +10,13 @@ COPY package*.json ./
 # Install app dependencies
 RUN npm install -g npm@9.8.1
 RUN npm install -g next
+RUN npm run build
 
 # Copy the rest of the application code
 COPY . .
 
 # Build the Next.js app
-RUN npm run build
+
 
 # Expose the port that the app will run on
 EXPOSE 3000
