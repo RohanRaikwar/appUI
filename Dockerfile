@@ -1,37 +1,31 @@
-# Use an official Node.js runtime as the base image
-FROM node:18-alpine AS builder
-
-# Set the working directory
+FROM node:18-alpine AS deps
+RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-# Copy package.json and package-lock.json to the working directory
-COPY package*.json ./
+COPY package.json package-lock.json ./
+RUN  npm install --production
 
-# Install dependencies
-RUN npm install -g npm@latest
-
-# Copy the rest of the application code
+FROM node:18-alpine AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# Build the Next.js app
-RUN next build
 
-# Use a lightweight Node.js runtime for serving the app
-FROM node:18-slim
+RUN npm run build
 
-# Set the working directory
+FROM node:18-alpine AS runner
 WORKDIR /app
 
-# Copy the built app from the builder stage
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/public ./public
+
+
+COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
+COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/package.json ./package.json
 
-# Install production dependencies
-RUN npm install -g npm@latest --production
+USER nextjs
 
-# Expose the desired port (e.g., 3000)
 EXPOSE 3000
 
-# Start the Next.js app
+ENV PORT 3000
+
 CMD ["npm", "start"]
