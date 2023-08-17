@@ -1,5 +1,5 @@
 # Use an official Node.js runtime as the base image
-FROM node:14 AS builder
+FROM node:18-alpine AS builder
 
 # Set the working directory
 WORKDIR /app
@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install
+RUN npm install -g npm@latest
 
 # Copy the rest of the application code
 COPY . .
@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build
 
 # Use a lightweight Node.js runtime for serving the app
-FROM node:14-slim
+FROM node:18-slim
 
 # Set the working directory
 WORKDIR /app
@@ -28,7 +28,7 @@ COPY --from=builder /app/public ./public
 COPY --from=builder /app/package.json ./package.json
 
 # Install production dependencies
-RUN npm install --production
+RUN npm install -g npm@latest --production
 
 # Expose the desired port (e.g., 3000)
 EXPOSE 3000
