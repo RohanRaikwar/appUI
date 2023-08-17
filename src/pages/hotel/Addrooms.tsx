@@ -106,7 +106,7 @@ const Addrooms = () => {
             <input
               type="checkbox"
               onChange={() => removeandadd(room)}
-              id={index}
+
               name={room}
               value={room}
             />
