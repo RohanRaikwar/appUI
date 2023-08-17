@@ -14,7 +14,7 @@ RUN npm install -g npm@latest
 COPY . .
 
 # Build the Next.js app
-RUN npm run build
+RUN next build
 
 # Use a lightweight Node.js runtime for serving the app
 FROM node:18-slim
