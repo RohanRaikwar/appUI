@@ -3,7 +3,7 @@ RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
 COPY package.json ./
-RUN  npm install --production
+RUN  npm install -g npm@9.8.1
 
 FROM node:18-alpine AS builder
 WORKDIR /app
