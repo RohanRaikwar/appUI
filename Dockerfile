@@ -1,31 +1,23 @@
-FROM node:18-alpine AS deps
-RUN apk add --no-cache libc6-compat
+# Use an official Node.js runtime as the base image
+FROM node:14-alpine
+
+# Set the working directory in the container
 WORKDIR /app
 
-COPY package.json ./
-RUN  npm install -g npm@9.8.1
+# Copy package.json and package-lock.json to the container
+COPY package*.json ./
 
-FROM node:18-alpine AS builder
-WORKDIR /app
-COPY --from=deps /app/node_modules ./node_modules
+# Install app dependencies
+RUN npm install
+
+# Copy the rest of the application code
 COPY . .
 
-ENV NEXT_TELEMETRY_DISABLED 1
-
+# Build the Next.js app
 RUN npm run build
 
-FROM node:18-alpine AS runner
-WORKDIR /app
-
-
-COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/package.json ./package.json
-
-USER nextjs
-
+# Expose the port that the app will run on
 EXPOSE 3000
 
-ENV PORT 3000
-
+# Define the command to run your app
 CMD ["npm", "start"]
