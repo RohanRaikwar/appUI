@@ -4,7 +4,7 @@ import Image from "next/image";
 import cross from "../../public/iconoir_cancel.svg";
 import Otp from "./Otp";
 import axios from "axios";
-import Circularloader from "@/materialUI/Circularloader";
+import Circularloader from "../materialUI/Circularloader";
 import { useForm } from "react-hook-form";
 import { Server } from "http";
 

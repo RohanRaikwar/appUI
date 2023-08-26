@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Logo from "./../../../public/Frame 2655 1.png";
-import Statusbar from "@/materialUI/Statusbar";
+import Statusbar from "../../materialUI/Statusbar";
 import style from "./../../styles/addrooms.module.css";
-import Circularloader from "@/materialUI/Circularloader";
+import Circularloader from "../../materialUI/Circularloader";
 import axios from "axios";
 
 import { incrementByAmount } from "../../redux/cardSlice";
@@ -16,7 +16,7 @@ const Addrooms = () => {
   const dispatch = useDispatch();
   const roomname: any = React.useRef();
   const [server, setserver] = React.useState(["Excutive"]);
-  const [rooms, setrooms] = React.useState<String[]>([]);
+  const [rooms, setrooms] = React.useState<string[]>([]);
   const router = useRouter()
   React.useEffect(() => {
     setrooms(["Deluxe", "Hannymoon"]);

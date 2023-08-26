@@ -1,6 +1,6 @@
 import React from 'react'
 import style from './../../styles/services.module.css'
-import Statusbar from '@/materialUI/Statusbar'
+import Statusbar from '../../materialUI/Statusbar'
 import Logo from './../../../public/Frame 2655 1.png'
 import Image from 'next/image'
 import kitchen from './../../../public/kitchen.svg'

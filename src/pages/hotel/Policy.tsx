@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import style from "./../../styles/policy.module.css";
 import Logo from "./../../../public/Frame 2655 1.png";
-import Statusbar from "@/materialUI/Statusbar";
+import Statusbar from "../../materialUI/Statusbar";
 import Image from "next/image";
 import checkblack from './../../../public/Untitled design.png'
 import checkfill from './../../../public/check fill.svg'

@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import style from "./../styles/uploadimage.module.css";
 import Logo from "./../../../public/Frame 2655 1.png";
-import Statusbar from "@/materialUI/Statusbar";
+import Statusbar from "../materialUI/Statusbar";
 import upload_image from "./../../../public/hotelpub/fileupload1.png";
 import Delete from "./../../public/deleteroom.svg";
 

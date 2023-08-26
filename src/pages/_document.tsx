@@ -10,8 +10,8 @@ import Document, {
 import createEmotionServer from '@emotion/server/create-instance';
 import { AppType } from 'next/app';
 import { EmployeeLeaveManagerProps } from './_app';
-import theme, { roboto } from '@/theme';
-import createEmotionCache from '@/createEmotionCache';
+import theme, { roboto } from '../theme';
+import createEmotionCache from '../createEmotionCache';
 
 interface EmployeeLeaveManagerDocumentProps extends DocumentProps {
   emotionStyleTags: JSX.Element[];

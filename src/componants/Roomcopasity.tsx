@@ -9,7 +9,7 @@ import deletelogo from "./../../public/deleteroom.png";
 import { useForm } from "react-hook-form";
 import joi, { any } from "joi";
 import { joiResolver } from "@hookform/resolvers/joi";
-import enterdetails from "@/pages/hotel/Enterdetails";
+import enterdetails from "../pages/hotel/Enterdetails";
 import { keys } from "@material-ui/core/styles/createBreakpoints";
 
 
@@ -200,7 +200,7 @@ const Roomcopasity = ({ room, roomsdata, setroomsdata ,pp}:any) => {
                   left: "29px",
                 }}
               >
-                {errors.rooms?.message.toString()}
+                {/* {errors.rooms?.message.toString()&&errors.rooms} */}
               </span>
             )}
             <button onClick={handleSubmit(onSubmit)}>SAVE</button>

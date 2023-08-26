@@ -5,7 +5,7 @@ import Router, { useRouter } from "next/router";
 import logo from "../../../public/Frame 2655 1.png";
 import Processbar from "../../materialUI/Statusbar";
 import upload1 from "../../../public/hotelpub/fileupload1.png";
-import Circularloader from "@/materialUI/Circularloader";
+import Circularloader from "../../materialUI/Circularloader";
 import { File } from "buffer";
 import axios from "axios";
 import type { RootState } from "../../redux/store";

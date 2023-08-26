@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/dist/client/image'
 import style from './../../styles/capasity.module.css'
 import Logo from './../../../public/Frame 2655 1.png'
-import Statusbar from '@/materialUI/Statusbar'
+import Statusbar from '../../materialUI/Statusbar'
 import Room from '../../componants/Roomcopasity'
 import { useDispatch, useSelector } from "react-redux";
 import joi, { object, valid } from 'joi'

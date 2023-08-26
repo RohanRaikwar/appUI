@@ -3,7 +3,7 @@ import styles from "./login.module.css";
 import Image from "next/image";
 import cross from "../../public/iconoir_cancel.svg";
 import { useForm } from "react-hook-form";
-import Circularloader from "@/materialUI/Circularloader";
+import Circularloader from "../materialUI/Circularloader";
 import Otp from "./Otp";
 import axios from "axios";
 import { error, log } from "console";

@@ -2,7 +2,7 @@ import React,{use, useEffect, useState} from "react";
 import style from "./../../styles/adamenies.module.css";
 import Image from "next/image";
 import Logo from "./../../../public/Frame 2655 1.png";
-import Statusbar from "@/materialUI/Statusbar";
+import Statusbar from "../../materialUI/Statusbar";
 import drowp from "./../../../public/Group (1).png";
 import televistion from "./../../../public/adamines/televition.svg";
 import frees from "./../../../public/adamines/frees.svg";

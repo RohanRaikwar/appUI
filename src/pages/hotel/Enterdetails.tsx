@@ -15,8 +15,8 @@ import { ErrorMessage } from "@hookform/error-message"
 import mail from "../../../public/hotelpub/mail.png";
 import phonebook from "../../../public/hotelpub/phonebook.png";
 import phon from "../../../public/hotelpub/phonr.png";
-import Statusbar from "@/materialUI/Statusbar";
-import Circularloader from "@/materialUI/Circularloader";
+import Statusbar from "../../materialUI/Statusbar";
+import Circularloader from "../../materialUI/Circularloader";
 import { joiResolver } from "@hookform/resolvers/joi";
 const Schema = joi.object({
   hotelname: joi
@@ -151,7 +151,7 @@ const Enterdetails = () => {
                 type="text"
                 placeholder="Hotel Name"
                 {...register("hotelname", { required: true })}
-              /><span>{errors.hotelname?.message.toString()}</span>
+              /><span>{errors?.hotelname?.message?.toString()}</span>
             </div>
             <div>
               <Image src={mail} alt="hu" />{" "}
@@ -160,7 +160,7 @@ const Enterdetails = () => {
                 {...register("email", { required: true })}
                 placeholder="Email Address"
               />
-              <span>{errors.email?.message.toString()}</span>
+              <span>{errors?.email?.message?.toString()}</span>
             </div>
             <div>
               <Image src={phon} alt="hu" />{" "}
@@ -169,7 +169,7 @@ const Enterdetails = () => {
                 placeholder="Contact Number"
                 {...register("contact", { required: "contact is required"})}
               />
-              <span>{errors.contact?.message.toString()}</span>
+              <span>{errors?.contact?.message?.toString()}</span>
             </div>
             <div>
               <Image src={address} alt="hu" />{" "}
@@ -177,7 +177,7 @@ const Enterdetails = () => {
                 type="text"
                 placeholder="City"
                 {...register("city", { required: true })}
-              /><span>{errors.city?.message.toString()}</span>
+              /><span>{errors?.city?.message?.toString()}</span>
             </div>
             <div>
               <Image src={phonebook} alt="hu" />{" "}
@@ -185,7 +185,7 @@ const Enterdetails = () => {
                 type="text"
                 placeholder="Address "
                 {...register("address", { required: true })}
-              /><span>{errors.address?.message.toString()}</span>
+              /><span>{errors?.address?.message?.toString()}</span>
             </div>
             <div>
               <Image src={gst} alt="hu" />{" "}
@@ -193,7 +193,7 @@ const Enterdetails = () => {
                 type="text"
                 placeholder="GSTIN"
                 {...register("GSTIN", { required: true })}
-              /><span>{errors.GSTIN?.message.toString()}</span>
+              /><span>{errors?.GSTIN?.message?.toString()}</span>
             </div>
           </div>
 
