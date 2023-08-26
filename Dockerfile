@@ -8,9 +8,9 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install app dependencies
-RUN npm install -g npm@9.8.1
-RUN npm install -g next
-RUN rm -rf .next
+RUN npm install  npm@9.8.1
+RUN npm install next
+
 
 # Copy the rest of the application code
 COPY . .
@@ -23,4 +23,4 @@ RUN npm run build
 EXPOSE 3000
 
 # Define the command to run your app
-CMD ["npm", "start"]
+CMD ["npm","run", "start"]
