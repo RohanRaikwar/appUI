@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from 'next/dist/client/image'
+import Image from 'next/image'
 import style from './../../styles/capasity.module.css'
 import Logo from './../../../public/Frame 2655 1.png'
 import Statusbar from '../../materialUI/Statusbar'
