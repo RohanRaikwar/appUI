@@ -5,7 +5,7 @@ FROM node:18 AS build
 WORKDIR /app
 
 # Copy package.json and package-lock.json to the container
-COPY package.json package-lock.json ./
+COPY package.json ./
 
 # Install project dependencies
 RUN npm install
