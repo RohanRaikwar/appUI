@@ -10,7 +10,7 @@ COPY package.json package-lock.json ./
 
 # Install project dependencies
 RUN npm install -g npm@9.8.1
-RUN npm install next
+RUN npm install -g next
 
 # Copy the rest of the application code
 COPY . .
