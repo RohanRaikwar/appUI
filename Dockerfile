@@ -6,10 +6,11 @@ FROM node:18 AS builder
 WORKDIR /app
 
 # Copy package.json and package-lock.json to the working directory
-COPY package*.json ./
+COPY package.json package-lock.json ./
 
 # Install project dependencies
 RUN npm install -g npm@9.8.1
+RUN npm install next
 
 # Copy the rest of the application code
 COPY . .
