@@ -1,38 +1,25 @@
-# Use the official Node.js LTS image as the base image
-FROM node:18 AS build
+# Stage 1: Build the Next.js app
+FROM node:18-alpine as build
 
-# Set the working directory in the container
 WORKDIR /app
 
-# Copy package.json and package-lock.json to the container
-COPY package.json ./
+COPY package*.json ./
+RUN npm install -g npm@9.8.1
 
-# Install project dependencies
-RUN npm install
-
-# Copy the entire project to the container
 COPY . .
-
-# Build the Next.js application
 RUN npm run build
 
-# Create a new image for the production environment
-FROM node:18 AS production
+# Stage 2: Serve the built application
+FROM node:18-alpine
 
-# Set the working directory in the container
 WORKDIR /app
 
-# Copy the built application from the build stage to the production stage
 COPY --from=build /app/.next ./.next
 COPY --from=build /app/public ./public
-COPY --from=build /app/package.json .
-COPY --from=build /app/node_modules ./node_modules
+COPY --from=build /app/package.json ./package.json
 
-# Expose the port that the application will run on
+RUN npm install --only=production
+
 EXPOSE 3000
 
-# Set environment variable for production
-
-
-# Start the Next.js application
-CMD ["npm", "start"]
+CMD ["npm", "run", "start"]
