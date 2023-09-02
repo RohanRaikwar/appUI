@@ -26,6 +26,8 @@ const Addrooms = () => {
     roomname.current.value=""
   }
   function removeandadd(value: string) {
+    console.log("hiii");
+    
     
     const index = server.indexOf(value);
   
@@ -104,8 +106,10 @@ const Addrooms = () => {
         {rooms.map((room:string, index:number) => (
           <div key={index}>
             <input
+             id ={room}
               type="checkbox"
-              onChange={() => removeandadd(room)}
+              onChange={()=>removeandadd(room)
+              }
              
               name={room}
               value={room}

@@ -21,10 +21,13 @@ import windhow from "./../../../public/adamines/window.svg";
 import balcony from "./../../../public/adamines/balcony1.svg";
 import { useDispatch,useSelector } from "react-redux";
 import axios from "axios";
-
+import {useRouter} from "next/router";
+import Circularloader from "@/materialUI/Circularloader";
 
 
 const Amenities = () => {
+  const [loadershow, setloadershow] = useState(true);
+  const router = useRouter()
  
   
 
@@ -69,6 +72,8 @@ const Amenities = () => {
 
   }
   const requestHandler =()=>{
+    setloadershow(false)
+  
     axios.post("https://revivohotelmanagment-app.onrender.com/api/hoteldata/room/amenities",{
       amenities:tempArray
       
@@ -76,8 +81,9 @@ const Amenities = () => {
     },{
       headers:{authorization:localStorage.getItem("SavedToken")}
     }
-    ).then(res=>console.log(res)
-    ).catch(err=>console.log(err)
+    ).then( ()=> {router.push("http://localhost:3000/hotel/uploadroomimage")
+         setloadershow(true)}
+    ).catch(err=>setloadershow(true)
     )
 
   }
@@ -85,6 +91,9 @@ const Amenities = () => {
 
   return (  
     <div className={style.main}>
+         <div style={loadershow ? { display: "none" } : { display: "block" }}>
+        <Circularloader />
+      </div>
     
       <div className={style.into_cont}>
         <h1>Add Amenities</h1> <Image src={Logo} alt="dd" />

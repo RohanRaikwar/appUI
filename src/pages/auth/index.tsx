@@ -5,8 +5,8 @@ import Imageslider from '../../materialUI/Image.slicder'
 import styles from "../../styles/auth.module.css"
 import logo from '../../../public/smalllogo.svg'
 import { ClassNames } from '@emotion/react'
-import Login from '../../componants/Login'
-import Sigup from '../../componants/Signup.module'
+import Login from '../../componants/login'
+import Sigup from '../../componants/signup.module'
 import Otp from '../../componants/Otp'
 
 const index = () => {

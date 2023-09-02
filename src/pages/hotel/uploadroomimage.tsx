@@ -4,11 +4,16 @@ import style from "./../../styles/uploadimage.module.css";
 import Logo from "./../../../public/Frame 2655 1.png";
 import Statusbar from "../../materialUI/Statusbar";
 import upload_image from "./../../../public/hotelpub/fileupload1.png";
+import Circularloader from "@/materialUI/Circularloader";
 
-import Photoos from '../../componants/Photoo'
+import Photoos from '../../componants/photoo'
 import axios from "axios";
+import { useRouter } from "next/router";
+
 
 const Uploadroomimage = () => {
+  const router = useRouter()
+  const [loadershow, setloadershow] = useState(true);
   const rooms: string[] = ["deluxe", "hannymoon", "excutive"];
   const [photos, setPhotos] = useState<{name:string,path:string}[]>([]);
   const [age, setAge] = React.useState('');
@@ -63,6 +68,7 @@ const Uploadroomimage = () => {
 
   }
   const requistHandller =()=>{
+    setloadershow(false)
     axios.post("https://revivohotelmanagment-app.onrender.com/api/hoteldata/room/upload",{
       photos:photos
 
@@ -71,8 +77,9 @@ const Uploadroomimage = () => {
       headers:{
         authorization:localStorage.getItem("SavedToken")
       }
-    }).then(res=>console.log(res)
-    ).catch(err=>console.log(err)
+    }).then(res=>{router.push("http://localhost:3000/hotel/policy")
+              setloadershow(true)}
+    ).catch(err=>setloadershow(true)
     )
 
   }
@@ -80,6 +87,9 @@ const Uploadroomimage = () => {
 
   return (
     <div className={style.main}>
+        <div style={loadershow ? { display: "none" } : { display: "block" }}>
+        <Circularloader />
+      </div>
       <div className={style.into_cont}>
         <h1>Add Images</h1> <Image src={Logo} alt="dd" />
       </div>
