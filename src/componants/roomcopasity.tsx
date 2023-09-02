@@ -9,7 +9,6 @@ import deletelogo from "./../../public/deleteroom.png";
 import { useForm } from "react-hook-form";
 import joi, { any } from "joi";
 import { joiResolver } from "@hookform/resolvers/joi";
-import enterdetails from "../pages/hotel/Enterdetails";
 import { keys } from "@material-ui/core/styles/createBreakpoints";
 
 
