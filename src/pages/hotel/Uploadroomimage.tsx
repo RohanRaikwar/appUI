@@ -7,11 +7,14 @@ import upload_image from "./../../../public/hotelpub/fileupload1.png";
 
 import Photoos from '../../componants/Photoo'
 import axios from "axios";
+import { useRouter } from 'next/router'
+import { basePath } from '@/conttand'
 
 const Uploadroomimage = () => {
   const rooms: string[] = ["deluxe", "hannymoon", "excutive"];
   const [photos, setPhotos] = useState<{name:string,path:string}[]>([]);
   const [age, setAge] = React.useState('');
+  const router= useRouter()
 
   console.log("photo", photos.length);
  
@@ -71,7 +74,7 @@ const Uploadroomimage = () => {
       headers:{
         authorization:localStorage.getItem("SavedToken")
       }
-    }).then(res=>console.log(res)
+    }).then( router.push(`${basePath}/policy`)
     ).catch(err=>console.log(err)
     )
 

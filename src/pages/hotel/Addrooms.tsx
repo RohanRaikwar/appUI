@@ -9,6 +9,7 @@ import axios from "axios";
 import { incrementByAmount } from "../../redux/cardSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { Router, useRouter } from "next/router";
+import { basePath } from "@/conttand";
 
 const Addrooms = () => {
   const [loadershow,setloadershow] =useState(true)
@@ -65,7 +66,7 @@ const Addrooms = () => {
       )
       .then((res) => {console.log(res); setloadershow(true);
            if(res.data.completedstage=="room types uploaded"){
-            router.push("http://localhost:3000/hotel/capasity")
+            router.push(`${basePath}/hotel/capasity`)
            }
      
       })}

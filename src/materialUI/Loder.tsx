@@ -10,6 +10,7 @@ import CircularProgress, {
 import LinearProgress, {
   linearProgressClasses,
 } from "@mui/material/LinearProgress";
+import { basePath } from "@/conttand";
 
 const BorderLinearProgress: any = styled(LinearProgress)(({ theme }) => ({
   height: 10,
@@ -39,7 +40,7 @@ export default function CustomizedProgressBars() {
   React.useEffect(() => {
     const timer = setInterval(() => {
       if (progress == 100) {
-        router.push("/auth");
+        router.push(`${basePath}/auth`);
       }
 
       setProgress((prevProgress: any) =>

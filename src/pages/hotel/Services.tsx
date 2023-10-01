@@ -14,6 +14,7 @@ import lundary from './../../../public/lundary.png'
 import kit from './../../../public/spa.svg'
 import axios from 'axios'
 import { useRouter } from 'next/router'
+import { basePath } from '@/conttand'
 
 const Services = () => {
   const [service,setservice] = React.useState<any>(["Housekeeping","Spa"])
@@ -45,7 +46,7 @@ const Services = () => {
         headers:{authorization:localStorage.getItem("SavedToken")}
       }).then((res)=>{
         console.log(res);
-        router.push("http://localhost:3000/hotel/amenities")
+        router.push(`${basePath}/hotel/amenities`)
         
       }).catch((err)=>console.log(err)
       )

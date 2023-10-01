@@ -14,6 +14,7 @@ import { useSelector, useDispatch } from "react-redux";
 import camera from "../../../public/cemara 2.svg";
 import cross from "./../../../public/Group.png";
 import gallery from "./../../../public/gallery.svg";
+import { basePath } from "@/conttand";
 const Varification = () => {
   const router = useRouter()
   const [status, setstatus] = useState<any>([]);
@@ -138,7 +139,7 @@ const Varification = () => {
         
         setloadershow(true);
         if(res.data.completedstage=="typeof vari docs uploaded"){
-          router.push("http://localhost:3000/hotel/addrooms")
+          router.push(`${basePath}/hotel/addrooms`)
 
         }
       }).catch(err=>console.log(err)

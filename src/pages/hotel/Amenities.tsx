@@ -21,10 +21,14 @@ import windhow from "./../../../public/adamines/window.svg";
 import balcony from "./../../../public/adamines/balcony1.svg";
 import { useDispatch,useSelector } from "react-redux";
 import axios from "axios";
+import { useRouter } from 'next/router'
+import { basePath } from "@/conttand";
+
 
 
 
 const Amenities = () => {
+  const router = useRouter()
  
   
 
@@ -76,7 +80,7 @@ const Amenities = () => {
     },{
       headers:{authorization:localStorage.getItem("SavedToken")}
     }
-    ).then(res=>console.log(res)
+    ).then( router.push(`${basePath}/uploadroomimage`)
     ).catch(err=>console.log(err)
     )
 

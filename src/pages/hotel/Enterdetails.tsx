@@ -18,6 +18,7 @@ import phon from "../../../public/hotelpub/phonr.png";
 import Statusbar from "@/materialUI/Statusbar";
 import Circularloader from "@/materialUI/Circularloader";
 import { joiResolver } from "@hookform/resolvers/joi";
+import { basePath } from "@/conttand";
 const Schema = joi.object({
   hotelname: joi
     .string()
@@ -101,7 +102,7 @@ const Enterdetails = () => {
       )
       .then((res) => {
         if ((res.data.completedstage = "contact details filled")) {
-          router.push("http://localhost:3000/hotel/varification");
+          router.push(`${basePath}/hotel/varification`);
           setloadershow(true);
         }
       })

@@ -4,6 +4,7 @@ import Image from "next/image";
 import logo from "../../public/Frame 2655 1.png";
 import { style } from "@mui/system";
 import { useRouter } from "next/router";
+import { basePath } from "@/conttand";
 
 const Welcome = () => {
   const router = useRouter()
@@ -31,7 +32,7 @@ const Welcome = () => {
             <li>Guest Policies</li>
           </ul>
           <div className={styles.btns}>
-            <button className={styles.back}>Back</button> <button className={styles.cont} onClick={()=> router.push("http://localhost:3000/hotel/enterdetails")}>continue</button>
+            <button className={styles.back}>Back</button> <button className={styles.cont} onClick={()=> router.push(`${basePath}hotel/enterdetails`)}>continue</button>
           </div>
         </div>
       </div>

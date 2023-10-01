@@ -6,6 +6,7 @@ import Image from "next/image";
 import cross from "../../public/iconoir_cancel.svg";
 import axios from "axios";
 import { useRouter } from "next/router";
+import { basePath } from "@/conttand";
 
 const Otp = ({ otdown, phone, requesturl, setloadershow, loadershow }: any) => {
   const {
@@ -40,7 +41,7 @@ const Otp = ({ otdown, phone, requesturl, setloadershow, loadershow }: any) => {
         localStorage.setItem("SavedToken", "Bearer " + token);
         axios.defaults.headers.common["Authorization"] = "Bearer " + token;
         setloadershow(true);
-        router.push("http://localhost:3000/welcome");
+        router.push(`${basePath}/welcome`);
       })
       .catch((err) => {
         setloadershow(true);

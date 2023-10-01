@@ -10,6 +10,7 @@ import { useRouter } from 'next/router'
 import { UseSelector} from 'react-redux/es/hooks/useSelector'
 
 import axios from 'axios'
+import { basePath } from '@/conttand'
 
 
 
@@ -62,7 +63,7 @@ const Capasity = () => {
           
         }
       }).then((res)=>{
-        router.push('http://localhost:3000/hotel/services')
+        router.push(`${basePaths}/hotel/services`)
       }
       )
       .catch((err)=>console.log(err)
